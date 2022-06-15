@@ -1,0 +1,19 @@
+tag_prefix = "v"
+ignore_merge_commits = true
+branch_whitelist = ["master"]
+pre_bump_hooks = [
+  "cargo test -- --test-threads 1",
+#  "cargo clippy",
+  "cargo build --release",
+  "cargo fmt --all",
+  "cargo set-version {{version}}",
+]
+post_bump_hooks = []
+
+[commit_types]
+
+[changelog]
+path = "CHANGELOG.md"
+authors = []
+
+[bump_profiles]
