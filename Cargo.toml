@@ -1,9 +1,27 @@
 [package]
 name = "aptbot"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-teloxide = "0.9.2"
+teloxide = { version = "0.9.2", features = ["native-tls", "webhooks-axum", "macros"] }
+# Remove direct teloxide-core dependency when teloxide will be updated
+teloxide-core = "0.6.3"
+
+url = { version = "2.2.2" }
+tokio = { version = "1.19.2", features = ["full"]}
+
+sqlx = { version = "0.5.13", features = ["runtime-tokio-native-tls", "postgres", "migrate"] }
+
+axum = { version = "0.5.10" }
+hyper = { version = "0.14.19", features = ["full"] }
+tower = "0.4.13"
+
+log = "0.4.17"
+env_logger = "0.9.0"
+
+dotenv = "0.15.0"
+
+anyhow = "1.0.58"
