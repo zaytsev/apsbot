@@ -11,6 +11,7 @@ pre_bump_hooks = [
 post_bump_hooks = []
 
 [commit_types]
+bump = { changelog_title = "Dependency updates"}
 
 [changelog]
 path = "CHANGELOG.md"
