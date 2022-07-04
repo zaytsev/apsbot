@@ -74,6 +74,8 @@
                   cargo-geiger
                   cargo-outdated
                   cargo-audit
+                
+                  sqlx-cli
 
                   pkg-config
                   openssl
